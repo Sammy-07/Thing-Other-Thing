@@ -74,7 +74,7 @@ jobs:
       # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
       run: ctest --build-config ${{ matrix.build_type }}
 
-                  - name: Upload a Build Artifact
+    - name: Upload a Build Artifact
   uses: actions/upload-artifact@v6.0.0
   with:
     # Artifact name
@@ -87,7 +87,7 @@ Available Options:
   error: Fail the action with an error message
   ignore: Do not output any warnings or errors, the action does not fail
 
-    if-no-files-found: # optional, default is warn
+    if-no-files-found: ignore # optional, default is warn
     # Duration after which artifact will expire in days. 0 means using default retention.
 Minimum 1 day. Maximum 90 days unless changed from the repository settings page.
 
