@@ -38,6 +38,9 @@ int main() {
     cout << "init password\n";
     string sudotry = "a";
     cout << "init sudotry\n";
+
+    //Help
+    string help_command = "a";
     cout << "Initialization Complete\n";
 
     /*
@@ -57,8 +60,14 @@ int main() {
         cout << "\nYou: ";
         cin >> answer;
 
+        //Help
+        if (answer == "help") 
+        {
+            cout << "Type the name of the command for help with it or cmdlist for a list of commands";
+        }
+
         //Version
-        if (answer == "version")
+        if (answer == "version") 
         {
             cout << "The running version is: " + program_version;
         }
