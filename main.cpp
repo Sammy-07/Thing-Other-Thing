@@ -2,6 +2,7 @@
 #include <cmath>
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
 
 using namespace std;
 
@@ -9,22 +10,48 @@ int main() {
 
     //main variables
     bool exit = false;
+    cout << "init exit\n";
     string answer = "empty";
+    cout << "init answer\n";
+    string program_version = "1.14.1c";
+    cout << "init version\n";
 
-    //sum variables
+    //Config file
+    string writeconfig = "empty";
+    cout << "init writeconfig\n";
+
+
+    //Math variables
     int num1 = 0;
+    cout << "init num1\n";
     int num2 = 0;
-    int sum_result = 0;
+    cout << "init num2\n";
+    int math_result = 0;
+    cout << "init math_result\n";
+    string math_operator = "empty";
+    cout << "init math_operator\n";
 
     //Sudo
     bool sudo = false;
+    cout << "init sudo\n";
     string password = "samcpp";
+    cout << "init password\n";
     string sudotry = "a";
+    cout << "init sudotry\n";
+    cout << "Initialization Complete\n";
+
+    /*
+    fstream configfile("config.txt", ios::app);
+    if (!configfile.is_open()) {
+        cout << "Failed to open config.txt\n";
+    }
+    */
+    
 
 
 
-    cout << "\n THING OTHER THING \n";
-    cout << "--------------------------------------------------------------------------------";
+    cout << "\n\n\n THING OTHER THING \n";
+    cout << "--------------------------------------------------------------------------------\n";
 
     while (exit == false) {
         cout << "\nYou: ";
@@ -33,7 +60,14 @@ int main() {
         //Version
         if (answer == "version")
         {
-            cout << "The running version is: 1.9.7c";
+            cout << "The running version is: " + program_version;
+        }
+
+        //Time
+        if (answer == "time") {
+            time_t timestamp;
+            time(&timestamp);
+            cout << ctime(&timestamp);
         }
         
 
@@ -89,9 +123,45 @@ int main() {
             cin >> num1;
             cout << "Second number: ";
             cin >> num2;
-            sum_result = num1 + num2;
-            cout << "Result: " << sum_result;
+            math_result = num1 + num2;
+            cout << "Result: " << math_result;
             
+        }
+
+        //Multiply
+        if (answer == "multiply") {
+            cout << "First number: ";
+            cin >> num1;
+            cout << "Second number: ";
+            cin >> num2;
+            math_result = num1 * num2;
+            cout << "Result: " << math_result;
+        }
+
+        //Math
+        if (answer == "math") {
+            cout << "First number: ";
+            cin >> num1;
+            cout << "Operator: ";
+            cin >> math_operator;
+            if (math_operator == "+") {
+                cout << "Second number: ";
+                cin >> num2;
+                math_result = num1 + num2;
+            } else if (math_operator == "-") {
+                cout << "Second number: ";
+                cin >> num2;
+                math_result = num1 - num2;
+            } else if (math_operator == "*") {
+                cout << "Second number: ";
+                cin >> num2;
+                math_result = num1 * num2;
+            } else if (math_operator == "/") {
+                cout << "Second number: ";
+                cin >> num2;
+                math_result = num1 / num2;
+            }
+            cout << "Result: " << math_result;
         }
 
         //Random large
@@ -126,7 +196,62 @@ int main() {
                 cout << "num1: " << num1 << "\n";
                 cout << "num2: " << num2 << "\n";
                 cout << "exit: " << exit << "\n";
+                cout << "math_result: " << math_result << "\n";
+                cout << "sudotry: " << sudotry << "\n";
+                cout << "writeconfig: " << writeconfig << "\n";
+                cout << "math_operator: " << math_operator << "\n";
+                cout << "program_version: " << program_version << "\n";
+
             }
+
+            /*
+            if (answer == "overload")
+            {
+                string overload = "BOOM";
+                overload = overload * 999999999999999;
+            }
+            */
+            
+            /*
+            //make and write to a file
+            if (answer == "makefile") {
+                ofstream file("config.txt");
+                file << "Files can be tricky, but it is fun enough!";
+                file.close();
+            }
+            
+
+            //close file
+            if (answer == "save-config") {
+                configfile.close();
+                cout << "File closed";
+            }
+
+            //write to the config file
+            if (answer == "write-config") {
+                cout << "Text to write to config file: ";
+                cin >> writeconfig;
+                configfile << writeconfig;
+            }
+
+            if (answer == "test") {
+                cout << "functional";
+            }
+            */
+
+            if (answer == "write-config") {
+                ofstream configfile("config.txt", ios::app);
+                if (!configfile) {
+                    cout << "Could not open file\n";
+                } else {
+                    cout << "Text to write to config file: ";
+                    cin.ignore();
+                    getline(cin, writeconfig);
+                    configfile << writeconfig << endl;
+                    cout << "Written to file\n";
+                }
+            }
+
             
         }
         
@@ -135,4 +260,3 @@ int main() {
 }
 
 
-   
