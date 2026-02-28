@@ -6,6 +6,17 @@
 
 using namespace std;
 
+//Help
+string help_command = "inited";
+
+void manual() {
+    cout << "Type the name of the command for help with it or cmdlist for a list of commands\n If you reached here by accident or want to leave type bye to exit";
+    cin >> help_command;
+    if (help_command == "bye") {
+        cout << "hi";
+    }
+}
+
 int main() {
 
     //main variables
@@ -39,8 +50,9 @@ int main() {
     string sudotry = "a";
     cout << "init sudotry\n";
 
-    //Help
-    string help_command = "a";
+    if (help_command == "inited") {
+        cout << "init help_command\n";
+    }
     cout << "Initialization Complete\n";
 
     /*
@@ -63,7 +75,7 @@ int main() {
         //Help
         if (answer == "help") 
         {
-            cout << "Type the name of the command for help with it or cmdlist for a list of commands";
+            manual();
         }
 
         //Version
@@ -267,5 +279,7 @@ int main() {
     }
     return 0;
 }
+
+
 
 
