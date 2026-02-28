@@ -269,7 +269,7 @@ int main() {
                 cout << "functional";
             }
             */
-
+            /*
             if (answer == "write-config") {
                 ofstream configfile("config.txt", ios::app);
                 if (!configfile) {
@@ -282,7 +282,7 @@ int main() {
                     cout << "Written to file\n";
                 }
             }
-
+            */
             
         }
         
