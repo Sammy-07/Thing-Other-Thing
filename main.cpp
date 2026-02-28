@@ -10,11 +10,14 @@ using namespace std;
 string help_command = "inited";
 
 void manual() {
+    cout << "\n--------------------------------------------------------------------------------\n";
     cout << "Type the name of the command for help with it or cmdlist for a list of commands\nIf you reached here by accident or want to leave type bye to exit\n";
     cout << "Manual: ";
+    cout << "\n--------------------------------------------------------------------------------\n";
     cin >> help_command;
     if (help_command == "bye") {
         cout << "Exited help";
+        cout << "\n--------------------------------------------------------------------------------\n";
     }
 
     if (help_command == "cmdlist") {
@@ -32,7 +35,7 @@ int main() {
     cout << "init exit\n";
     string answer = "empty";
     cout << "init answer\n";
-    string program_version = "1.15.7c";
+    string program_version = "1.15.8c";
     cout << "init version\n";
 
     //Config file
