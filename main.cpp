@@ -10,10 +10,16 @@ using namespace std;
 string help_command = "inited";
 
 void manual() {
-    cout << "Type the name of the command for help with it or cmdlist for a list of commands\n If you reached here by accident or want to leave type bye to exit";
+    cout << "Type the name of the command for help with it or cmdlist for a list of commands\nIf you reached here by accident or want to leave type bye to exit\n";
+    cout << "Manual: ";
     cin >> help_command;
     if (help_command == "bye") {
-        cout << "hi";
+        cout << "Exited help";
+    }
+
+    if (help_command == "cmdlist") {
+        cout << "1. help\n2. version\n3. time\n4. sudo?\n5. sudo\n6. exit\n7. hi\n8. sum (Legacy)\n9. multiply (Legacy)\n10. math\n11. rand-l\n12. rand-10\n13. coinflip\n";
+        manual();
     }
 }
 
@@ -24,7 +30,7 @@ int main() {
     cout << "init exit\n";
     string answer = "empty";
     cout << "init answer\n";
-    string program_version = "1.14.1c";
+    string program_version = "1.15.5c";
     cout << "init version\n";
 
     //Config file
