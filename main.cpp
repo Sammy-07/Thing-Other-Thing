@@ -34,7 +34,7 @@ int main() {
     cout << "init exit\n";
     string answer = "empty";
     cout << "init answer\n";
-    string program_version = "1.15.9.c";
+    string program_version = "1.15.9c";
     cout << "init version\n";
 
     //Config file
