@@ -12,7 +12,7 @@ string help_command = "inited";
 void manual() {
     cout << "\n--------------------------------------------------------------------------------\n";
     cout << "Type the name of the command for help with it or cmdlist for a list of commands\nIf you reached here by accident or want to leave type bye to exit\n";
-    cout << "Manual: ";
+    cout << "\nManual: ";
     cin >> help_command;
     if (help_command == "bye") {
         cout << "Exited help";
@@ -34,7 +34,7 @@ int main() {
     cout << "init exit\n";
     string answer = "empty";
     cout << "init answer\n";
-    string program_version = "1.15.9c";
+    string program_version = "1.15.11c";
     cout << "init version\n";
 
     //Config file
