@@ -125,7 +125,7 @@ int main() {
     cout << "init exit\n";
     string answer = "empty";
     cout << "init answer\n";
-    string program_version = "1.16.0c";
+    string program_version = "1.16.1c";
     cout << "init version\n";
 
     //Config file
@@ -323,6 +323,7 @@ int main() {
                 cout << "writeconfig: " << writeconfig << "\n";
                 cout << "math_operator: " << math_operator << "\n";
                 cout << "program_version: " << program_version << "\n";
+                cout << "help_command: " << help_command << "\n";
 
             }
 
