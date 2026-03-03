@@ -125,7 +125,7 @@ int main() {
     cout << "init exit\n";
     string answer = "empty";
     cout << "init answer\n";
-    string program_version = "1.16.1c";
+    string program_version = "1.16.2c";
     cout << "init version\n";
 
     //Config file
@@ -174,7 +174,7 @@ int main() {
         cin >> answer;
 
         //Help
-        if (answer == "help") 
+        if (answer == "help" || answer == "man" || answer == "manual") 
         {
             manual();
         }
