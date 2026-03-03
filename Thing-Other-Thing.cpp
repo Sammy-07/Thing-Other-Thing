@@ -26,7 +26,7 @@ void manual() {
         manual();
     }
 
-    if (help_command == "help") {
+    if (help_command == "help" || help_command == "man" || help_command == "manual") {
         cout << "\n--------------------------------------------------------------------------------\n";
         cout << "Opens the manual for the commands";
         cout << "\n--------------------------------------------------------------------------------\n";
@@ -125,7 +125,7 @@ int main() {
     cout << "init exit\n";
     string answer = "empty";
     cout << "init answer\n";
-    string program_version = "1.16.3c";
+    string program_version = "1.16.4c";
     cout << "init version\n";
 
     //Config file
