@@ -274,7 +274,7 @@ int main() {
                 cout << "Second number: ";
                 cin >> num2;
                 math_result = num1 - num2;
-            } else if (math_operator == "*") {
+            } else if (math_operator == "*" || math_operator == "x") {
                 cout << "Second number: ";
                 cin >> num2;
                 math_result = num1 * num2;
