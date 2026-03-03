@@ -21,7 +21,7 @@ void manual() {
 
     if (help_command == "cmdlist") {
         cout << "\n--------------------------------------------------------------------------------\n";
-        cout << "1. help\n2. version\n3. time\n4. sudo?\n5. sudo\n6. exit\n7. hi\n8. sum (Legacy)\n9. multiply (Legacy)\n10. math\n11. rand-l\n12. rand-10\n13. coinflip";
+        cout << "1. help/man/manual\n2. version\n3. time\n4. sudo?\n5. sudo\n6. exit\n7. hi\n8. sum (Legacy)\n9. multiply (Legacy)\n10. math\n11. rand-l\n12. rand-10\n13. coinflip";
         cout << "\n--------------------------------------------------------------------------------\n";
         manual();
     }
@@ -125,7 +125,7 @@ int main() {
     cout << "init exit\n";
     string answer = "empty";
     cout << "init answer\n";
-    string program_version = "1.16.2c";
+    string program_version = "1.16.3c";
     cout << "init version\n";
 
     //Config file
